@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/general.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navegacion-principal">
+        <div class="contenedor-navegacion">
+            <div class="logo">
+                <i class="fas fa-home"></i> Property Pro
+            </div>
+            <ul class="menu-navegacion">
+                <li><a href="#index">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#productos">Propiedades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="boton-sesion" onclick="abrirModal()">
+                <i class="fas fa-user"></i> Iniciar Sesión
+            </button>
+            <div class="menu-hamburguesa" onclick="toggleMenu()">
+                <div class="linea-hamburguesa"></div>
+                <div class="linea-hamburguesa"></div>
+                <div class="linea-hamburguesa"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal -->
+    <section id="inicio" class="seccion-principal">
+        <div class="contenedor-principal">
+            <div class="contenido-principal">
+                <h1>Tu hogar perfecto te está esperando</h1>
+                <p>Conectamos propietarios y arrendatarios de manera fácil, segura y confiable. Encuentra la propiedad de tus sueños o arrienda la tuya con total tranquilidad.</p>
+                <div class="botones-accion">
+                    <a href="#productos" class="boton-principal">
+                        <i class="fas fa-search"></i> Buscar Propiedades
+                    </a>
+                    <a href="#servicios" class="boton-secundario">
+                        <i class="fas fa-plus"></i> Publicar Propiedad
+                    </a>
+                </div>
+            </div>
+            <div class="imagen-principal">
+                <div class="carrusel-principal">
+                    <div class="slide-carrusel activo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%234883A5%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Casa Moderna</text></svg>')"></div>
+                    <div class="slide-carrusel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%23072638%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Apartamento Lujoso</text></svg>')"></div>
+                    <div class="slide-carrusel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22rgba(12, 97, 136, 0.589)%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Oficina Ejecutiva</text></svg>')"></div>
+                    <div class="indicadores-carrusel">
+                        <div class="indicador activo" onclick="cambiarSlide(0)"></div>
+                        <div class="indicador" onclick="cambiarSlide(1)"></div>
+                        <div class="indicador" onclick="cambiarSlide(2)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="seccion seccion-nosotros">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion">Sobre Nosotros</h2>
+            <p class="subtitulo-seccion">Facilitamos conexiones inmobiliarias confiables y transparentes</p>
+            
+            <div class="contenido-nosotros">
+                <div>
+                    <h3 style="color: var(--color-secundario); font-size: 2rem; margin-bottom: 1rem;">Nuestra Misión</h3>
+                    <p class="texto-nosotros">
+                        Ser la plataforma líder en Latinoamérica para transacciones inmobiliarias, reconocida por nuestra 
+                        innovación tecnológica, transparencia y compromiso con la satisfacción de nuestros usuarios.
+                    </p>
+                    <p class="texto-nosotros">
+                        Aspiramos a transformar completamente la experiencia inmobiliaria, haciendo que cada búsqueda 
+                        sea exitosa y cada transacción sea segura y confiable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="valores-nosotros">
+                <div class="valor-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Confianza</h3>
+                    <p>Verificamos cada propiedad y usuario para garantizar transacciones seguras y confiables.</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Innovación</h3>
+                    <p>Utilizamos la última tecnología para ofrecer la mejor experiencia de búsqueda inmobiliaria.</p>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Compromiso</h3>
+                    <p>Nos dedicamos completamente al éxito de cada cliente en su búsqueda inmobiliaria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="seccion">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion">Nuestros Servicios</h2>
+            <p class="subtitulo-seccion">Soluciones completas para todas tus necesidades inmobiliarias</p>
+            
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-search-plus"></i>
+                    <h3>Búsqueda Avanzada</h3>
+                    <p>Encuentra la propiedad perfecta usando nuestros filtros inteligentes por ubicación, precio, características y más. Nuestra tecnología te conecta con las opciones que realmente se ajustan a tus necesidades.</p>
+                    <a href="#" class="enlace-servicio">
+                        Explorar búsquedas <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="servicio-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Publicación Premium</h3>
+                    <p>Publica tu propiedad con fotos profesionales, tours virtuales y descripciones detalladas. Llega a miles de potenciales inquilinos con máxima visibilidad.</p>
+                    <a href="#" class="enlace-servicio">
+                        Publicar ahora <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="servicio-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Gestión de Contratos</h3>
+                    <p>Facilitamos todo el proceso legal con contratos digitales seguros, verificación de identidad y seguimiento completo de la documentación necesaria.</p>
+                    <a href="#" class="enlace-servicio">
+                        Conocer más <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="servicio-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Verificación de Usuarios</h3>
+                    <p>Sistema completo de verificación de identidad, referencias crediticias y laborales para garantizar la confiabilidad de todos nuestros usuarios.</p>
+                    <a href="#" class="enlace-servicio">
+                        Verificarme <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="servicio-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Asesoría Financiera</h3>
+                    <p>Te ayudamos a calcular costos, evaluar opciones de financiamiento y tomar las mejores decisiones económicas para tu inversión inmobiliaria.</p>
+                    <a href="#" class="enlace-servicio">
+                        Solicitar asesoría <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="servicio-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro equipo de expertos está disponible las 24 horas para resolver dudas, brindar asistencia técnica y acompañarte en todo el proceso.</p>
+                    <a href="#" class="enlace-servicio">
+                        Contactar soporte <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos/Propiedades -->
+    <section id="productos" class="seccion seccion-productos">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion">Propiedades Destacadas</h2>
+            <p class="subtitulo-seccion">Descubre las mejores opciones disponibles en nuestra plataforma</p>
+            
+            <div class="carrusel-productos">
+                <div class="contenedor-productos" id="contenedorProductos">
+                    <div class="producto-card">
+                        <div class="imagen-producto">
+                           <img src="img/anuncio1.jpg" alt="Anuncio1" loading="lazy">
+                        <div class="etiqueta-precio">$1,200/mes</div>
+                        </div>
+                        <div class="contenido-producto">
+                            <h3>Apartamento Moderno en Zona Rosa</h3>
+                            <p>Hermoso apartamento de 2 habitaciones con acabados de lujo, cocina integral y excelente ubicación cerca del centro comercial.</p>
+                            <div class="botones-producto">
+                                <button class="boton-producto boton-contactar">
+                                    <i class="fas fa-phone"></i> Contactar
+                                </button>
+                                <button class="boton-producto boton-detalles">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="producto-card">
+                        <div class="imagen-producto" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 350 250%22><rect fill=%22%23072638%22 width=%22350%22 height=%22250%22/><text x=%22175%22 y=%22125%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22>Casa Familiar</text></svg>')">
+                            <div class="etiqueta-precio">$1,800/mes</div>
+                        </div>
+                        <div class="contenido-producto">
+                            <h3>Casa Familiar con Jardín</h3>
+                            <p>Amplia casa de 3 habitaciones con jardín privado, garaje para 2 autos y zona de barbacoa. Perfect para familias.</p>
+                            <div class="botones-producto">
+                                <button class="boton-producto boton-contactar">
+                                    <i class="fas fa-phone"></i> Contactar
+                                </button>
+                                <button class="boton-producto boton-detalles">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="producto-card">
+                        <div class="imagen-producto" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 350 250%22><rect fill=%22rgba(12, 97, 136, 0.589)%22 width=%22350%22 height=%22250%22/><text x=%22175%22 y=%22125%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22>Oficina Ejecutiva</text></svg>')">
+                            <div class="etiqueta-precio">$2,500/mes</div>
+                        </div>
+                        <div class="contenido-producto">
+                            <h3>Oficina Ejecutiva Centro</h3>
+                            <p>Espacio comercial premium en el distrito financiero, completamente amoblado con salas de juntas y recepción.</p>
+                            <div class="botones-producto">
+                                <button class="boton-producto boton-contactar">
+                                    <i class="fas fa-phone"></i> Contactar
+                                </button>
+                                <button class="boton-producto boton-detalles">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="producto-card">
+                        <div class="imagen-producto" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 350 250%22><rect fill=%22%23555%22 width=%22350%22 height=%22250%22/><text x=%22175%22 y=%22125%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22>Estudio Universitario</text></svg>')">
+                            <div class="etiqueta-precio">$650/mes</div>
+                        </div>
+                        <div class="contenido-producto">
+                            <h3>Estudio Cerca Universidad</h3>
+                            <p>Acogedor estudio completamente amoblado, ideal para estudiantes. Incluye servicios y wifi de alta velocidad.</p>
+                            <div class="botones-producto">
+                                <button class="boton-producto boton-contactar">
+                                    <i class="fas fa-phone"></i> Contactar
+                                </button>
+                                <button class="boton-producto boton-detalles">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="controles-carrusel control-anterior" onclick="moverCarrusel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="controles-carrusel control-siguiente" onclick="moverCarrusel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="seccion seccion-contacto">
+        <div class="contenedor-seccion">
+            <h2 class="titulo-seccion" style="color: var(--color-blanco);">Contáctanos</h2>
+            <p class="subtitulo-seccion" style="color: rgba(255,255,255,0.9);">Estamos aquí para ayudarte en cada paso del proceso</p>
+            
+            <div class="contenido-contacto">
+                <div class="info-contacto">
+                    <h3>¿Tienes alguna pregunta?</h3>
+                    <p>Nuestro equipo de expertos está listo para asistirte con cualquier consulta sobre propiedades, servicios o procesos. No dudes en contactarnos.</p>
+                    
+                    <div class="item-contacto">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Dirección</strong><br>
+                            Calle 123 #45-67, Medellín, Antioquia<br>
+                            Colombia
+                        </div>
+                    </div>
+                    
+                    <div class="item-contacto">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Teléfonos</strong><br>
+                            +57 (4) 123-4567<br>
+                            Línea Nacional: 01 8000 123 456
+                        </div>
+                    </div>
+                    
+                    <div class="item-contacto">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@propertyPro.com<br>
+                            soporte@propertyPro.com
+                        </div>
+                    </div>
+                    
+                    <div class="item-contacto">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horarios de Atención</strong><br>
+                            Lunes a Viernes: 8:00 AM - 6:00 PM<br>
+                            Sábados: 9:00 AM - 2:00 PM
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="formulario-contacto" onsubmit="enviarFormulario(event)">
+                    <div class="mensaje-exito" id="mensajeExito">
+                        ¡Gracias por tu mensaje! Te contactaremos pronto.
+                    </div>
+                    <div class="mensaje-error" id="mensajeError">
+                        Por favor, completa todos los campos requeridos.
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="asunto">Asunto *</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="boton-enviar">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-principal">
+        <div class="contenido-footer">
+            <div class="seccion-footer">
+                <h3>PropiedadesConnect</h3>
+                <p>La plataforma líder para conectar propietarios y arrendatarios de manera segura y confiable.</p>
+                <div class="redes-sociales">
+                    <a href="#" class="red-social" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="red-social" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="red-social" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="red-social" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="red-social" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="seccion-footer">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Propiedades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="seccion-footer">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Buscar Propiedades</a></li>
+                    <li><a href="#">Publicar Propiedad</a></li>
+                    <li><a href="#">Verificación</a></li>
+                    <li><a href="#">Asesoría Legal</a></li>
+                    <li><a href="#">Soporte Técnico</a></li>
+                </ul>
+            </div>
+            
+            <div class="seccion-footer">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Protección de Datos</a></li>
+                    <li><a href="#">Resolución de Conflictos</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="derechos-footer">
+            <p>&copy; 2025 PropiedadesConnect. Todos los derechos reservados. | Desarrollado con ❤️ para conectar hogares</p>
+        </div>
+    </footer>
+
+    <!-- Modal Inicio de Sesión -->
+    <div class="modal-overlay" id="modalSesion">
+        <div class="modal-contenido">
+            <button class="boton-cerrar" onclick="cerrarModal()">&times;</button>
+            
+            <div class="tabs-sesion">
+                <button class="tab-sesion activo" onclick="cambiarTab('usuario')">Usuario</button>
+                <button class="tab-sesion" onclick="cambiarTab('admin')">Administrador</button>
+            </div>
+            
+            <div class="contenido-tab activo" id="tabUsuario">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--color-secundario);">Iniciar Sesión - Usuario</h3>
+                <form onsubmit="iniciarSesionUsuario(event)">
+                    <div class="grupo-formulario">
+                        <label for="emailUsuario">Correo Electrónico</label>
+                        <input type="email" id="emailUsuario" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="passwordUsuario">Contraseña</label>
+                        <input type="password" id="passwordUsuario" required>
+                    </div>
+                    
+                    <button type="submit" class="boton-enviar">
+                        <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem;">
+                        ¿No tienes cuenta? <a href="#" style="color: var(--color-terciario);">Regístrate aquí</a>
+                    </p>
+                </form>
+            </div>
+            
+            <div class="contenido-tab" id="tabAdmin">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--color-secundario);">Iniciar Sesión - Administrador</h3>
+                <form onsubmit="iniciarSesionAdmin(event)">
+                    <div class="grupo-formulario">
+                        <label for="emailAdmin">Correo Electrónico</label>
+                        <input type="email" id="emailAdmin" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="passwordAdmin">Contraseña</label>
+                        <input type="password" id="passwordAdmin" required>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="codigoAdmin">Código de Administrador</label>
+                        <input type="text" id="codigoAdmin" placeholder="Código especial" required>
+                    </div>
+                    
+                    <button type="submit" class="boton-enviar">
+                        <i class="fas fa-shield-alt"></i> Acceder como Admin
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let slideActual = 0;
+        let posicionCarrusel = 0;
+
+        // Inicialización cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            iniciarCarruselPrincipal();
+            animarElementosScroll();
+        });
+
+        // Función para toggle del menú móvil
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-navegacion');
+            menu.classList.toggle('activo');
+        }
+
+        // Carrusel principal
+        function iniciarCarruselPrincipal() {
+            setInterval(siguienteSlide, 5000);
+        }
+
+        function cambiarSlide(indice) {
+            const slides = document.querySelectorAll('.slide-carrusel');
+            const indicadores = document.querySelectorAll('.indicador');
+            
+            slides[slideActual].classList.remove('activo');
+            indicadores[slideActual].classList.remove('activo');
+            
+            slideActual = indice;
+            
+            slides[slideActual].classList.add('activo');
+            indicadores[slideActual].classList.add('activo');
+        }
+
+        function siguienteSlide() {
+            const totalSlides = document.querySelectorAll('.slide-carrusel').length;
+            const siguienteIndice = (slideActual + 1) % totalSlides;
+            cambiarSlide(siguienteIndice);
+        }
+
+        // Carrusel de productos
+        function moverCarrusel(direccion) {
+            const contenedor = document.getElementById('contenedorProductos');
+            const tarjetas = document.querySelectorAll('.producto-card');
+            const anchoTarjeta = tarjetas[0].offsetWidth + 32; // 32px de margen
+            const maxPosicion = -(anchoTarjeta * (tarjetas.length - 3));
+            
+            posicionCarrusel += direccion * anchoTarjeta;
+            
+            if (posicionCarrusel > 0) {
+                posicionCarrusel = maxPosicion;
+            } else if (posicionCarrusel < maxPosicion) {
+                posicionCarrusel = 0;
+            }
+            
+            contenedor.style.transform = `translateX(${posicionCarrusel}px)`;
+        }
+
+        // Modal de inicio de sesión
+        function abrirModal() {
+            document.getElementById('modalSesion').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalSesion').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function cambiarTab(tipo) {
+            const tabs = document.querySelectorAll('.tab-sesion');
+            const contenidos = document.querySelectorAll('.contenido-tab');
+            
+            tabs.forEach(tab => tab.classList.remove('activo'));
+            contenidos.forEach(contenido => contenido.classList.remove('activo'));
+            
+            if (tipo === 'usuario') {
+                tabs[0].classList.add('activo');
+                document.getElementById('tabUsuario').classList.add('activo');
+            } else {
+                tabs[1].classList.add('activo');
+                document.getElementById('tabAdmin').classList.add('activo');
+            }
+        }
+
+        // Funciones de inicio de sesión
+        function iniciarSesionUsuario(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailUsuario').value;
+            const password = document.getElementById('passwordUsuario').value;
+            
+            // Simulación de validación
+            if (email && password) {
+                alert('¡Bienvenido! Iniciando sesión como usuario...');
+                cerrarModal();
+                // Aquí se integraría con PHP para validación real
+            }
+        }
+
+        function iniciarSesionAdmin(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailAdmin').value;
+            const password = document.getElementById('passwordAdmin').value;
+            const codigo = document.getElementById('codigoAdmin').value;
+            
+            // Simulación de validación
+            if (email && password && codigo) {
+                alert('¡Acceso administrativo concedido! Redirigiendo al panel...');
+                cerrarModal();
+                // Aquí se integraría con PHP para validación de admin
+            }
+        }
+
+        // Formulario de contacto
+        function enviarFormulario(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const asunto = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const mensajeExito = document.getElementById('mensajeExito');
+            const mensajeError = document.getElementById('mensajeError');
+            
+            // Resetear mensajes
+            mensajeExito.style.display = 'none';
+            mensajeError.style.display = 'none';
+            
+            if (nombre && email && asunto && mensaje) {
+                // Simulación de envío exitoso
+                mensajeExito.style.display = 'block';
+                event.target.reset();
+                
+                // Aquí se integraría con PHP para envío real
+                setTimeout(() => {
+                    mensajeExito.style.display = 'none';
+                }, 5000);
+            } else {
+                mensajeError.style.display = 'block';
+                setTimeout(() => {
+                    mensajeError.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // Animaciones al hacer scroll
+        function animarElementosScroll() {
+            const observador = new IntersectionObserver((entradas) => {
+                entradas.forEach((entrada) => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add('fade-in-up');
+                    }
+                });
+            });
+
+            // Observar elementos para animación
+            const elementos = document.querySelectorAll('.servicio-card, .producto-card, .valor-item');
+            elementos.forEach(elemento => observador.observe(elemento));
+        }
+
+        // Navegación suave actualizada
+        document.addEventListener('DOMContentLoaded', function() {
+            const enlaces = document.querySelectorAll('a[href^="#"]');
+            
+            enlaces.forEach(enlace => {
+                enlace.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const destino = document.querySelector(this.getAttribute('href'));
+                    
+                    if (destino) {
+                        destino.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Cerrar menú móvil si está abierto
+                        const menu = document.querySelector('.menu-navegacion');
+                        menu.classList.remove('activo');
+                    }
+                });
+            });
+        });
+
+        // Efecto de navegación al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navegacion = document.querySelector('.navegacion-principal');
+            
+            if (window.scrollY > 100) {
+                navegacion.style.background = 'rgba(255, 255, 255, 0.95)';
+                navegacion.style.backdropFilter = 'blur(10px)';
+            } else {
+                navegacion.style.background = 'var(--color-blanco)';
+                navegacion.style.backdropFilter = 'none';
+            }
+        });
+
+        // Cerrar modal al hacer clic fuera
+        document.getElementById('modalSesion').addEventListener('click', function(e) {
+            if (e.target === this) {
+                cerrarModal();
+            }
+        });
+
+        // Cerrar modal con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                cerrarModal();
+            }
+        });
+
+        // Funciones para botones de productos
+        document.querySelectorAll('.boton-contactar').forEach(boton => {
+            boton.addEventListener('click', function() {
+                alert('¡Funcionalidad de contacto! Aquí se abriría un formulario específico o chat.');
+            });
+        });
+
+        document.querySelectorAll('.boton-detalles').forEach(boton => {
+            boton.addEventListener('click', function() {
+                alert('¡Ver detalles! Aquí se abriría una página con información completa de la propiedad.');
+            });
+        });
+
+        // Auto ajuste del carrusel en resize
+        window.addEventListener('resize', function() {
+            posicionCarrusel = 0;
+            document.getElementById('contenedorProductos').style.transform = 'translateX(0px)';
+        });
+    </script>
+</body>
+</html>
