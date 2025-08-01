@@ -333,8 +333,8 @@ body {
 /* Sección Servicios */
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 }
 
 .servicio-card {
@@ -352,7 +352,7 @@ body {
 }
 
 .servicio-card i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--color-terciario);
     margin-bottom: 1rem;
 }
@@ -487,34 +487,6 @@ body {
     color: var(--color-blanco);
 }
 
-.controles-carrusel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.9);
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--color-secundario);
-    transition: all 0.3s ease;
-}
-
-.controles-carrusel:hover {
-    background: var(--color-terciario);
-    color: var(--color-blanco);
-}
-
-.control-anterior {
-    left: 10px;
-}
-
-.control-siguiente {
-    right: 10px;
-}
-
 /* Sección Contacto */
 .seccion-contacto {
     background: var(--color-secundario);
@@ -523,7 +495,7 @@ body {
 
 .contenido-contacto {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
 }
 
