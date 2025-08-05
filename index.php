@@ -20,7 +20,7 @@
                             <li><a href="#productos">Propiedades</a></li>
                             <li><a href="#contacto">Contacto</a></li>
                             <button class="boton-sesion" >
-                                <a href="login.html">Iniciar Sesión</a>
+                                <a href="login.php">Iniciar Sesión</a>
                             </button>
                         </ul>
                     </nav>
