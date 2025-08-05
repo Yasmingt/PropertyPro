@@ -1,0 +1,152 @@
+/* Reset básico y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: rgba(12, 97, 136, 0.589);
+    --color-secundario: #072638;
+    --color-terciario: #4883A5;
+    --color-gris: #555;
+    --color-blanco: white;
+    --color-negro: black;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    font-family: var(--fuente-principal);
+    background: var(--color-blanco);
+}
+
+/* Contenedor principal de login e imagen */
+.contenedor-login {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Imagen a la izquierda */
+.login-imagen {
+    flex: 3;
+    background-image: url('../img/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-login {
+    width: 120px; /* puedes ajustar a 100px, 150px, etc. según lo que te parezca "mediano" */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+/* Contenedor del login a la derecha */
+.modal-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    background: var(--color-blanco);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--color-secundario);
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+.grupo-formulario input {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.grupo-formulario input:focus {
+    border-color: var(--color-terciario);
+    outline: none;
+}
+
+/* Botón */
+.boton-enviar {
+    background: var(--color-terciario);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-enviar:hover {
+    background: var(--color-secundario);
+}
+
+/* Párrafo debajo del formulario */
+.modal-contenido p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.modal-contenido a {
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.modal-contenido a:hover {
+    text-decoration: underline;
+}
+
+/* Tabs */
+.contenido-tab {
+    display: none;
+}
+
+.contenido-tab.activo {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-login {
+        flex-direction: column;
+    }
+
+    .login-imagen {
+        height: 200px;
+        flex: none;
+    }
+
+    .modal-contenido {
+        flex: none;
+        padding: 2rem;
+    }
+}

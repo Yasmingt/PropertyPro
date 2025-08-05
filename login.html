@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/login.css" />
 </head>
 <body>
-   <div >
-        <div class="modal-contenido">
-            <div class="contenido-tab activo" id="tabUsuario">
+  <div class="contenedor-login">
+    <div class="login-imagen"></div>
+
+    <div class="modal-contenido">
+        <div class="contenido-tab activo" id="tabUsuario">
+            <img src="img/logo.jpg" alt="Logo" class="logo-login">
                 <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--color-secundario);">Iniciar Sesión</h3>
                 <form onsubmit="iniciarSesionUsuario(event)">
                     <div class="grupo-formulario">
@@ -57,5 +60,10 @@
             </div>
         </div>
     </div>
+    </div>
+  </div>
+<body>
+   <div >
+       
 </body>
 </html>
