@@ -3,99 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/general.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/app.css">
+    <title>PropertyPro</title>
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navegacion-principal">
-        <div class="contenedor-navegacion">
-            <div class="logo">
-                <i class="fas fa-home"></i> Property Pro
-            </div>
-            <ul class="menu-navegacion">
-                <li><a href="#index">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#productos">Propiedades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <button class="boton-sesion" onclick="abrirModal()">
-                <i class="fas fa-user"></i> Iniciar Sesión
-            </button>
-            <div class="menu-hamburguesa" onclick="toggleMenu()">
-                <div class="linea-hamburguesa"></div>
-                <div class="linea-hamburguesa"></div>
-                <div class="linea-hamburguesa"></div>
-            </div>
-        </div>
-    </nav>
+    <header class="header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="#" class="logo">Property Pro</a>
 
-    <!-- Sección Principal -->
-    <section id="inicio" class="seccion-principal">
-        <div class="contenedor-principal">
-            <div class="contenido-principal">
+                <div>
+                    <nav class="navegacion-principal">
+                        <ul class="menu-navegacion">
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#productos">Propiedades</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                            <button class="boton-sesion" >
+                                <a href="login.html">Iniciar Sesión</a>
+                            </button>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="contenido-hero">
                 <h1>Tu hogar perfecto te está esperando</h1>
                 <p>Conectamos propietarios y arrendatarios de manera fácil, segura y confiable. Encuentra la propiedad de tus sueños o arrienda la tuya con total tranquilidad.</p>
-                <div class="botones-accion">
-                    <a href="#productos" class="boton-principal">
-                        <i class="fas fa-search"></i> Buscar Propiedades
-                    </a>
-                    <a href="#servicios" class="boton-secundario">
-                        <i class="fas fa-plus"></i> Publicar Propiedad
-                    </a>
-                </div>
-            </div>
-            <div class="imagen-principal">
-                <div class="carrusel-principal">
-                    <div class="slide-carrusel activo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%234883A5%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Casa Moderna</text></svg>')"></div>
-                    <div class="slide-carrusel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%23072638%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Apartamento Lujoso</text></svg>')"></div>
-                    <div class="slide-carrusel" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22rgba(12, 97, 136, 0.589)%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22>Oficina Ejecutiva</text></svg>')"></div>
-                    <div class="indicadores-carrusel">
-                        <div class="indicador activo" onclick="cambiarSlide(0)"></div>
-                        <div class="indicador" onclick="cambiarSlide(1)"></div>
-                        <div class="indicador" onclick="cambiarSlide(2)"></div>
-                    </div>
-                </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Sección Nosotros -->
     <section id="nosotros" class="seccion seccion-nosotros">
         <div class="contenedor-seccion">
             <h2 class="titulo-seccion">Sobre Nosotros</h2>
-            <p class="subtitulo-seccion">Facilitamos conexiones inmobiliarias confiables y transparentes</p>
-            
-            <div class="contenido-nosotros">
-                <div>
-                    <h3 style="color: var(--color-secundario); font-size: 2rem; margin-bottom: 1rem;">Nuestra Misión</h3>
-                    <p class="texto-nosotros">
-                        Ser la plataforma líder en Latinoamérica para transacciones inmobiliarias, reconocida por nuestra 
-                        innovación tecnológica, transparencia y compromiso con la satisfacción de nuestros usuarios.
-                    </p>
-                    <p class="texto-nosotros">
-                        Aspiramos a transformar completamente la experiencia inmobiliaria, haciendo que cada búsqueda 
-                        sea exitosa y cada transacción sea segura y confiable.
-                    </p>
+             <p class="subtitulo-seccion">Facilitamos conexiones inmobiliarias confiables y transparentes</p>          
+            <div class="valores-nosotros iconos-nosotros">
+                <div class="valor-item icono">
+                    <img src="img/icono1.svg" alt="Icono seguridad" loading="lazy">
+                    <h3>Seguridad</h3>
+                    <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
                 </div>
-            </div>
-
-            <div class="valores-nosotros">
-                <div class="valor-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Confianza</h3>
-                    <p>Verificamos cada propiedad y usuario para garantizar transacciones seguras y confiables.</p>
+                <div class="valor-item icono">
+                   <img src="img/icono2.svg" alt="Icono Precio" loading="lazy">
+                   <h3>Precio</h3>
+                   <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
                 </div>
-                <div class="valor-item">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Innovación</h3>
-                    <p>Utilizamos la última tecnología para ofrecer la mejor experiencia de búsqueda inmobiliaria.</p>
-                </div>
-                <div class="valor-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Compromiso</h3>
-                    <p>Nos dedicamos completamente al éxito de cada cliente en su búsqueda inmobiliaria.</p>
+                <div class=" valor-item icono">
+                    <img src="img/icono3.svg" alt="Icono Tiempo" loading="lazy">
+                    <h3>A Tiempo</h3>
+                    <p>Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti sit minus consectetur obcaecati molestiae dolorem natus dolores reiciendis tempore, explicabo cum nobis laudantium. Voluptates?</p>
                 </div>
             </div>
         </div>
@@ -112,36 +70,24 @@
                     <i class="fas fa-search-plus"></i>
                     <h3>Búsqueda Avanzada</h3>
                     <p>Encuentra la propiedad perfecta usando nuestros filtros inteligentes por ubicación, precio, características y más. Nuestra tecnología te conecta con las opciones que realmente se ajustan a tus necesidades.</p>
-                    <a href="#" class="enlace-servicio">
-                        Explorar búsquedas <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 
                 <div class="servicio-card">
                     <i class="fas fa-camera"></i>
                     <h3>Publicación Premium</h3>
                     <p>Publica tu propiedad con fotos profesionales, tours virtuales y descripciones detalladas. Llega a miles de potenciales inquilinos con máxima visibilidad.</p>
-                    <a href="#" class="enlace-servicio">
-                        Publicar ahora <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 
                 <div class="servicio-card">
                     <i class="fas fa-users"></i>
                     <h3>Verificación de Usuarios</h3>
                     <p>Sistema completo de verificación de identidad, referencias crediticias y laborales para garantizar la confiabilidad de todos nuestros usuarios.</p>
-                    <a href="#" class="enlace-servicio">
-                        Verificarme <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
                 
                 <div class="servicio-card">
                     <i class="fas fa-calculator"></i>
                     <h3>Asesoría Financiera</h3>
                     <p>Te ayudamos a calcular costos, evaluar opciones de financiamiento y tomar las mejores decisiones económicas para tu inversión inmobiliaria.</p>
-                    <a href="#" class="enlace-servicio">
-                        Solicitar asesoría <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -303,63 +249,6 @@
 
     <!-- Footer -->
     <footer class="footer-principal">
-        <div class="contenido-footer">
-            <div class="seccion-footer">
-                <h3>PropiedadesConnect</h3>
-                <p>La plataforma líder para conectar propietarios y arrendatarios de manera segura y confiable.</p>
-                <div class="redes-sociales">
-                    <a href="#" class="red-social" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="red-social" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="red-social" title="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="red-social" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="red-social" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="seccion-footer">
-                <h3>Navegación</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#productos">Propiedades</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            
-            <div class="seccion-footer">
-                <h3>Servicios</h3>
-                <ul>
-                    <li><a href="#">Buscar Propiedades</a></li>
-                    <li><a href="#">Publicar Propiedad</a></li>
-                    <li><a href="#">Verificación</a></li>
-                    <li><a href="#">Asesoría Legal</a></li>
-                    <li><a href="#">Soporte Técnico</a></li>
-                </ul>
-            </div>
-            
-            <div class="seccion-footer">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Protección de Datos</a></li>
-                    <li><a href="#">Resolución de Conflictos</a></li>
-                </ul>
-            </div>
-        </div>
-        
         <div class="derechos-footer">
             <p>&copy; 2025 PropiedadesConnect. Todos los derechos reservados. | Desarrollado con ❤️ para conectar hogares</p>
         </div>
@@ -441,23 +330,6 @@
             menu.classList.toggle('activo');
         }
 
-        // Carrusel principal
-        function iniciarCarruselPrincipal() {
-            setInterval(siguienteSlide, 5000);
-        }
-
-        function cambiarSlide(indice) {
-            const slides = document.querySelectorAll('.slide-carrusel');
-            const indicadores = document.querySelectorAll('.indicador');
-            
-            slides[slideActual].classList.remove('activo');
-            indicadores[slideActual].classList.remove('activo');
-            
-            slideActual = indice;
-            
-            slides[slideActual].classList.add('activo');
-            indicadores[slideActual].classList.add('activo');
-        }
 
         function siguienteSlide() {
             const totalSlides = document.querySelectorAll('.slide-carrusel').length;
@@ -607,19 +479,6 @@
                     }
                 });
             });
-        });
-
-        // Efecto de navegación al hacer scroll
-        window.addEventListener('scroll', function() {
-            const navegacion = document.querySelector('.navegacion-principal');
-            
-            if (window.scrollY > 100) {
-                navegacion.style.background = 'rgba(255, 255, 255, 0.95)';
-                navegacion.style.backdropFilter = 'blur(10px)';
-            } else {
-                navegacion.style.background = 'var(--color-blanco)';
-                navegacion.style.backdropFilter = 'none';
-            }
         });
 
         // Cerrar modal al hacer clic fuera
